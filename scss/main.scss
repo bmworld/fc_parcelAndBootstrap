@@ -1,0 +1,50 @@
+
+/* CUSTOMIZING -->  "순서" 중요
+
+1. 기본 function, variable, mixins 파일을 Import
+  @import "../node_modules/bootstrap/scss/functions";
+  @import "../node_modules/bootstrap/scss/variables";
+  @import "../node_modules/bootstrap/scss/mixins";
+2. 수정할 내용 입력
+3. bootstrap 기본 파일 적용
+  @import "../node_modules/bootstrap/scss/bootstrap";
+
+
+ */
+
+
+ /* SCSS Study */
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  #ca0101,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap"; // 모든 내용을 가져옴
+// @import "../node_modules/bootstrap/scss/dropdown";// 일부(특정한) 파일만 import ==> Trade Off --> 귀찮은 대신, 성능 최적화 //
+
+
+
+
+li{list-style:none;}
+body{
+ 
+  h1{
+    display:flex;
+  }
+
+}
